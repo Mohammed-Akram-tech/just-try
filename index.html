@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKRAM PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!---<img src="images/logo.png" class="logo">-->
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">sevices</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, i am Akram</h1>
+
+            </div>
+        </div>
+    </div>
+<!------- about ------->
+<div id="about">
+    <div class="container"> 
+        <div class="row">
+            <div class="about-col-1">
+            <img src="AKRAM im.jpeg" alt="">
+            </div>
+               <div class="about-col-2">
+               <h1 class="sub-title">about me</h1>
+               <p><Label> As a recent graduate eager to apply my academic knowledge and skills in a professional setting, I am enthusiastic about starting my career and contributing to a dynamic and growth-oriented organization.</p>
+                <div class="tab-titles">
+                    <p class="tab-link active-link" onclick="opentab('skills')">skills</p>
+                    <p class="tab-link" onclick="opentab('education')">education</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>pragramming</span><br>c/c++</li>
+                        <li><span>web development</span><br>designing web/app interface</li>
+                        <li><span>MS OFFICE</span><br>MS WORD, MS EXCEL, POWER POINT</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2024</span><br>C ABDUL HAKEEM COLLEGE </li>
+                        <li><span>2019-2021</span><br>VOORHEES HR SEC SCHOOL</li>
+                        <li><span>2018-2019</span><br>BHARAT MATRIC HR SEC SCHOOL</li>
+                    </ul>
+                </div>
+                
+        </div>
+        </div>
+    </div> 
+
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-link");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+    
+    
+</body>
+</html>
